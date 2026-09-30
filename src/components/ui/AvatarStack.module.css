@@ -1,0 +1,18 @@
+.stack {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+.badge {
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: var(--font-satoshi);
+  font-weight: 500;
+  line-height: 1.5;
+}
