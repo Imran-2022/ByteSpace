@@ -1,0 +1,11 @@
+.grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, #fff 2px, transparent 2px),
+    linear-gradient(to bottom, #fff 2px, transparent 2px);
+  background-size: 120px 120px;
+  background-position: calc(50% - 61px) -1px;
+}
