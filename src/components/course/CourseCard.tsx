@@ -41,7 +41,7 @@ export default function CourseCard({ course, borderColor, priceColor, className 
         </ul>
       </div>
 
-      <div className="absolute left-4 top-[232px] flex w-[341px] flex-col gap-4">
+      <div className="absolute left-4 top-[232px] flex h-[136px] w-[341px] flex-col justify-between">
         <div>
           <h3 className="w-[275px] font-poppins text-[20px] font-semibold leading-6 tracking-[-1px] text-black">{title}</h3>
           <p className="mt-1 text-[12px] leading-5 text-grey-700">{author}</p>
