@@ -8,8 +8,8 @@ const logos = [
 
 export default function LogoStrip() {
   return (
-    <section className="bg-surface py-8 lg:h-[202px] lg:py-0" aria-label="Trusted by">
-      <div className="mx-auto flex max-w-[1132px] flex-wrap items-center justify-center gap-x-8 gap-y-4 px-4 lg:relative lg:top-[80px] lg:h-[42px] lg:justify-start lg:px-0">
+    <section className="h-[202px] bg-surface" aria-label="Trusted by">
+      <div className="relative top-[80px] mx-auto h-[42px] w-[1132px]">
         {logos.map((l) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -18,7 +18,8 @@ export default function LogoStrip() {
             alt="Partner logo"
             width={l.w}
             height={l.h}
-            className="h-[41px] w-auto brightness-[0.62]"
+            className="absolute brightness-[0.62]"
+            style={{ left: l.x, top: l.y }}
           />
         ))}
       </div>

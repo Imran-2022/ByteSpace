@@ -40,14 +40,8 @@ body {
   font-family: var(--font-satoshi);
   color: #000;
   background: #fff;
-  min-width: 0;
+  min-width: 1200px;
   overflow-x: hidden;
-}
-
-img,
-svg {
-  display: block;
-  max-width: 100%;
 }
 
 a {
@@ -59,4 +53,8 @@ button,
 input {
   font: inherit;
   color: inherit;
+}
+
+img {
+  display: block;
 }
