@@ -32,18 +32,18 @@ export default function CourseCard({ course, borderColor, priceColor, className 
   } = course;
 
   return (
-    <article className={`relative h-[384px] w-[373px] flex-none overflow-hidden rounded-[24px] border border-solid border-grey-100 bg-white ${className ?? ""}`} style={{ borderColor }}>
-      <div className="absolute left-4 top-4 h-[195px] w-[341px] overflow-hidden rounded-xl bg-[#443131] bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}>
-        <ul className="absolute bottom-[13px] left-[13px] flex list-none gap-3">
+    <article className={`relative h-[384px] w-full max-w-[373px] flex-none overflow-hidden rounded-[24px] border border-solid border-grey-100 bg-white ${className ?? ""}`} style={{ borderColor }}>
+      <div className="absolute left-4 right-4 top-4 h-[195px] overflow-hidden rounded-xl bg-[#443131] bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}>
+        <ul className="absolute bottom-[13px] left-[13px] flex list-none flex-wrap gap-3">
           <li className="whitespace-nowrap rounded-[24px] bg-[rgba(246,246,246,0.6)] px-3 py-[6px] text-[12px] font-medium leading-5 text-grey-700 backdrop-blur-[8px]">17 Lessons</li>
           <li className="whitespace-nowrap rounded-[24px] bg-[rgba(246,246,246,0.6)] px-3 py-[6px] text-[12px] font-medium leading-5 text-grey-700 backdrop-blur-[8px]">2 hours 16 mins</li>
           <li className="whitespace-nowrap rounded-[24px] bg-[rgba(246,246,246,0.6)] px-3 py-[6px] text-[12px] font-medium leading-5 text-grey-700 backdrop-blur-[8px]">59 Comments</li>
         </ul>
       </div>
 
-      <div className="absolute left-4 top-[232px] flex h-[136px] w-[341px] flex-col justify-between">
+      <div className="absolute left-4 right-4 top-[232px] flex h-[136px] flex-col justify-between">
         <div>
-          <h3 className="w-[275px] font-poppins text-[20px] font-semibold leading-6 tracking-[-1px] text-black">{title}</h3>
+          <h3 className="max-w-[275px] font-poppins text-[20px] font-semibold leading-6 tracking-[-1px] text-black">{title}</h3>
           <p className="mt-1 text-[12px] leading-5 text-grey-700">{author}</p>
         </div>
 
