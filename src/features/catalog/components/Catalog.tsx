@@ -1,6 +1,5 @@
-import CourseCard, { type Course } from "./CourseCard";
+import CourseCard, { type Course } from "@/components/course/CourseCard";
 import CategoryTabs from "./CategoryTabs";
-import styles from "./Catalog.module.css";
 
 const courses: Course[] = [
   { title: "Learn Figma from Basic", image: "/images/93ad9f9e.jpg" },
@@ -13,21 +12,21 @@ const courses: Course[] = [
 
 export default function Catalog() {
   return (
-    <section className={styles.section} id="courses">
-      <div className={styles.heading}>
-        <h2>Discover Your Passion, Build Your Skills</h2>
-        <p>
+    <section className="relative h-[1422px] bg-white" id="courses">
+      <div className="absolute left-[261px] top-[72px] flex w-[917px] flex-col items-center gap-4 text-center">
+        <h2 className="w-[588px] font-poppins text-[44px] font-medium leading-[1.2] tracking-[-1px] text-black">Discover Your Passion, Build Your Skills</h2>
+        <p className="text-[18px] leading-[1.5] text-grey-700">
           At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of
           courses across different fields, from technology to the arts, and make a difference in
           your career and life.
         </p>
       </div>
 
-      <div className={styles.tabs}>
+      <div className="absolute inset-x-0 top-[294px]">
         <CategoryTabs />
       </div>
 
-      <div className={styles.grid}>
+      <div className="absolute left-[120px] top-[542px] grid w-[1199px] grid-cols-[repeat(3,373px)] gap-10">
         {courses.map((c) => (
           <CourseCard key={c.title} course={c} />
         ))}

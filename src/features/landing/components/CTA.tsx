@@ -1,7 +1,6 @@
 import Link from "next/link";
-import GridBackground from "./ui/GridBackground";
-import TintedShape from "./ui/TintedShape";
-import styles from "./CTA.module.css";
+import GridBackground from "@/components/ui/GridBackground";
+import TintedShape from "@/components/ui/TintedShape";
 
 type Shape = { src: string; w: number; h: number; x: number; y: number };
 
@@ -18,20 +17,20 @@ const shapes: Shape[] = [
 
 export default function CTA() {
   return (
-    <section className={styles.section}>
+    <section className="relative h-[488px] overflow-hidden bg-brand-blue">
       <GridBackground />
       {shapes.map((s, i) => (
         <TintedShape key={i} src={s.src} width={s.w} height={s.h} x={s.x} y={s.y} />
       ))}
-      <div className={styles.content}>
-        <h2>Unlock Your Potential as a Creator with ByteSpace</h2>
-        <p>
+      <div className="absolute left-[238px] top-[85px] flex w-[964px] flex-col items-center gap-6 text-center">
+        <h2 className="w-[710px] font-poppins text-[52px] font-medium leading-[64px] text-[#f5f5f6]">Unlock Your Potential as a Creator with ByteSpace</h2>
+        <p className="text-[18px] leading-7 text-grey-200">
           Experience the collaboration of numerous creators and an expanding selection of courses.
           Register now and become a part of a community comprising over 10,000 local and
           international creators. Utilize our Course Editor, and showcase your expertise by
           publishing your finest course on the ByteSpace Course Library.
         </p>
-        <Link href="/register" className={styles.btn}>
+        <Link href="/register" className="mt-2 inline-flex h-[46px] w-[172px] items-center justify-center rounded-[24px] bg-brand-lime-bright text-[18px] font-medium leading-7 text-ink">
           Join as Creator
         </Link>
       </div>
