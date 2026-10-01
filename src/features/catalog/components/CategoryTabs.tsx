@@ -26,7 +26,7 @@ export default function CategoryTabs() {
                 role="tab"
                 aria-selected={isActive}
                 type="button"
-                className={`h-[43px] cursor-pointer whitespace-nowrap rounded-[24px] border-0 px-4 text-[16px] font-medium leading-6 transition-colors duration-150 ease-in-out hover:bg-[#ede8ff] ${isActive ? "bg-[#ede8ff] text-black" : altSurface.has(label) ? "bg-surface text-[#4b4c53]" : "bg-[#f6f6f6] text-[#4f4f4f]"}`}
+                className={`h-[43px] cursor-pointer whitespace-nowrap rounded-[24px] border-0 px-4 text-[16px] font-medium leading-6 transition-colors duration-150 ease-in-out ${isActive ? "bg-brand-lime-bright text-black hover:bg-brand-lime-bright" : altSurface.has(label) ? "bg-surface text-[#4b4c53] hover:bg-[#ede8ff]" : "bg-[#f6f6f6] text-[#4f4f4f] hover:bg-[#ede8ff]"}`}
                 onClick={() => setActive(label)}
               >
                 {label}
