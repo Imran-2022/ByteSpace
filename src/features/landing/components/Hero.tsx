@@ -31,7 +31,7 @@ export default function Hero() {
     <section className="relative h-[1024px] overflow-hidden bg-brand-blue">
       <GridBackground />
       <div className="relative mx-auto h-[1024px] w-[1440px]">
-        <div className="absolute left-[-15px] top-[422px] box-border h-[1469px] w-[1469px] rounded-full border-[320px] border-solid border-brand-lime-ring" aria-hidden />
+        <div className="absolute left-[-15px] top-[570px] box-border h-[1469px] w-[1469px] rounded-full border-[320px] border-solid border-brand-lime-ring" aria-hidden />
 
         <div className="absolute left-[120px] top-[169px] flex w-[1200px] flex-col items-center gap-[60px]">
           <div className="flex w-[935px] flex-col items-center gap-8 text-center">
