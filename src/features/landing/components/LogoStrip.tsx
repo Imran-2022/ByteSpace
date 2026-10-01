@@ -18,7 +18,7 @@ export default function LogoStrip() {
             alt="Partner logo"
             width={l.w}
             height={l.h}
-            className="absolute"
+            className="absolute brightness-[0.62]"
             style={{ left: l.x, top: l.y }}
           />
         ))}
