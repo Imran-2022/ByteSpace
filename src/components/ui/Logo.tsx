@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./Logo.module.css";
 
 type Props = {
   markColor?: string;
@@ -9,9 +8,9 @@ type Props = {
 /** ByteSpace logo: mark (from the Figma vector) + Clash Display wordmark. */
 export default function Logo({ markColor = "#C1E338", textColor = "#F5F5F6" }: Props) {
   return (
-    <Link href="/" className={styles.logo} aria-label="ByteSpace home">
+    <Link href="/" className="relative block h-[37px] w-[171px]" aria-label="ByteSpace home">
       <svg
-        className={styles.mark}
+        className="absolute left-0 top-0"
         width="28.875"
         height="31.5"
         viewBox="0 0 28.875 31.5"
@@ -22,7 +21,10 @@ export default function Logo({ markColor = "#C1E338", textColor = "#F5F5F6" }: P
         <path d="M18.375 10.5C24.174 10.5 28.875 15.201 28.875 21H21C15.201 21 10.5 16.299 10.5 10.5H18.375Z" />
         <path d="M18.375 31.5C24.174 31.5 28.875 26.799 28.875 21H21C15.201 21 10.5 25.701 10.5 31.5H18.375Z" />
       </svg>
-      <span className={styles.word} style={{ color: textColor }}>
+      <span
+        className="absolute left-[37px] top-[7px] whitespace-nowrap font-clash text-[24px] font-bold leading-[30px]"
+        style={{ color: textColor }}
+      >
         ByteSpace
       </span>
     </Link>

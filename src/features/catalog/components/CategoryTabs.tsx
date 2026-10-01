@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./CategoryTabs.module.css";
 
 const rows: string[][] = [
   ["Featured", "Music", "Drawing & Painting", "Marketing", "Animation", "Social Media", "UI/UX Design", "Creative Marketing"],
@@ -16,9 +15,9 @@ export default function CategoryTabs() {
   const [active, setActive] = useState("Featured");
 
   return (
-    <div className={styles.tabs} role="tablist" aria-label="Course categories">
+    <div className="flex flex-col items-center gap-[21px]" role="tablist" aria-label="Course categories">
       {rows.map((row, i) => (
-        <div className={styles.row} key={i}>
+        <div className="flex items-center gap-4" key={i}>
           {row.map((label) => {
             const isActive = label === active;
             return (
@@ -27,14 +26,14 @@ export default function CategoryTabs() {
                 role="tab"
                 aria-selected={isActive}
                 type="button"
-                className={`${styles.pill} ${isActive ? styles.active : altSurface.has(label) ? styles.alt : ""}`}
+                className={`h-[43px] cursor-pointer whitespace-nowrap rounded-[24px] border-0 px-4 text-[16px] font-medium leading-6 transition-colors duration-150 ease-in-out hover:bg-[#ede8ff] ${isActive ? "bg-[#ede8ff] text-black" : altSurface.has(label) ? "bg-surface text-[#4b4c53]" : "bg-[#f6f6f6] text-[#4f4f4f]"}`}
                 onClick={() => setActive(label)}
               >
                 {label}
               </button>
             );
           })}
-          {i === rows.length - 1 && <span className={styles.more}>+ More</span>}
+          {i === rows.length - 1 && <span className="px-1 text-[16px] leading-6 text-[#4b4c53]">+ More</span>}
         </div>
       ))}
     </div>

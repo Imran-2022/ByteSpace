@@ -1,5 +1,3 @@
-import styles from "./LogoStrip.module.css";
-
 const logos = [
   { file: "partner-1.svg", w: 167, h: 41, x: 0, y: 1 },
   { file: "partner-2.svg", w: 168, h: 41, x: 239, y: 1 },
@@ -10,8 +8,8 @@ const logos = [
 
 export default function LogoStrip() {
   return (
-    <section className={styles.strip} aria-label="Trusted by">
-      <div className={styles.row}>
+    <section className="h-[202px] bg-surface" aria-label="Trusted by">
+      <div className="relative top-[80px] mx-auto h-[42px] w-[1132px]">
         {logos.map((l) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -20,6 +18,7 @@ export default function LogoStrip() {
             alt="Partner logo"
             width={l.w}
             height={l.h}
+            className="absolute"
             style={{ left: l.x, top: l.y }}
           />
         ))}
